@@ -1,0 +1,242 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  /* background:linear-gradient(whitesmoke, skyblue) ; */
+  background: radial-gradient(circle at top left, #a1c4fd, #c2e9fb, #fbc2eb);
+  display: flex;
+  height: 120vh;
+  align-items: center;
+  justify-content: center;
+  font-family:"arial";
+  margin: 0;
+  
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.6), transparent);
+  filter: blur(100px);
+  top: -50px;
+  left: -50px;
+  z-index: 0;
+}
+.container{
+  background: rgba(255, 255, 255, 0.15);
+   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  max-width: 90%;
+  padding: 40px 30px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  width: 400px;
+  border-radius: 20px;
+  border:  solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease forwards;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  overflow: hidden;
+}
+
+h1{
+  text-align: center;
+  color:#42a5f5;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+
+  
+  
+}
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-grup{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+label{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color:black;
+}
+/* Input & select & textarea */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+textarea{
+  box-sizing: border-box;
+  max-width: 1000%;
+  resize: vertical;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 10px rgba(33,150,243,0.4);
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* RADIO BUTTONS */
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.radio-item {
+  position: relative;
+  flex: 1;
+}
+
+/* radio asli disembunyikan tapi tetap aktif */
+.radio-item input[type="radio"] {
+  opacity: 10;
+  cursor: pointer;
+  
+}
+
+/* label bergaya tombol */
+.radio-item label {
+  display: block;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px 0;
+  font-weight: 600;
+  color: #0d47a1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+/* efek hover */
+.radio-item input:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: scale(1.03);
+}
+
+/* efek saat dipilih */
+/* Saat dipilih */
+.radio-group input[type="radio"]:checked + label {
+  background: #42a5f5;      /* warna latar aktif */
+  color: white;             /* warna teks aktif */
+  border-color: #1e88e5;    /* border berubah */
+  box-shadow: 0 0 10px rgba(33,150,243,0.5);
+  transform: scale(1.05);   /* sedikit efek membesar */
+}
+.radio-item label:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.4);
+}
+
+/* TOMBOL SUBMIT */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #42a5f5, #478ed1);
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(33,150,243,0.4);
+}
+
+
+button:hover {
+  background-color: #1976d2;
+  transform: scaleX(1.01);
+}
+
+
+/* Responsif */
+/* @media (max-width: 500px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+} */
+/* POPUP STYLE */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.4s ease;
+}
+
+.popup-content h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup-content button:hover {
+  background: linear-gradient(135deg, #64b5f6, #1565c0);
+  transform: scale(1.05);
+}
+
+/* Animasi lembut muncul */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
