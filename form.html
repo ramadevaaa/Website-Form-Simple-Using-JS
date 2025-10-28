@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +8,65 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="container">
         <h1>Form Input Data Mahasiswa</h1>
-    <form id="formMahasiswa">
-        <div class="form-grup">
-            <label for="nama">Nama Lengkap</label>
-            <input type="text" id="nama" placeholder="Masukkan Nama Lengkap: ..">
-        </div>
-        <div class="form-grup">
-            <label for="nim">NIM</label>
-            <input type="text" name="nim" id="nim" placeholder="Masukkan NIM: ..">
-        </div>
-        <div class="form-grup">
-            <label for="prodi">Program Studi</label>
-            <select name="prodi" id="prodi">
-                <option value="">--- Pilih Program Studi ---</option>
-                <option value="TI">Teknologi Informasi</option>
-                <option value="SI">Sistem Informasi</option>
-                <option value="MI">Manajamen Informatika</option>
-            </select>
-        </div>
-        <div class="form-grup">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="contoh (example@email.com)">
-        </div>
-        <div class="form-grup">
-            <label>Jenis Kelamin</label>
-            <div class="radio-group">
-                <div class="radio-item">
-                    <label> <input type="radio" name="gender" value="Laki-laki">Laki-laki</label>
-                <label> <input type="radio" name="gender" value="Laki-laki">Perempuan</label>
-                </div>
-                
+        <form id="formMahasiswa">
+            <div class="form-grup">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Masukkan Nama Lengkap: ..">
             </div>
-        </div>
-         <div class="form-grup">
-        <label for="tgl">Tanggal Lahir</label>
-        <input type="date" id="tgl" name="tgl">
-      </div>
-      <div class="form-grup">
-        <label for="alamat">Alamat</label>
-        <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap..."></textarea>
-      </div>
+            <div class="form-grup">
+                <label for="nim">NIM</label>
+                <input type="text" name="nim" id="nim" placeholder="Masukkan NIM: ..">
+            </div>
+            <div class="form-grup">
+                <label for="prodi">Program Studi</label>
+                <select name="prodi" id="prodi">
+                    <option value="">--- Pilih Program Studi ---</option>
+                    <option value="TI">Teknologi Informasi</option>
+                    <option value="SI">Sistem Informasi</option>
+                    <option value="MI">Manajamen Informatika</option>
+                </select>
+            </div>
+            <div class="form-grup">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="contoh (example@email.com)">
+            </div>
+            <div class="form-grup">
+                <label>Jenis Kelamin</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <label> <input type="radio" name="gender" value="Laki-laki">Laki-laki</label>
+                        <label> <input type="radio" name="gender" value="Laki-laki">Perempuan</label>
+                    </div>
 
-        <button type="submit">Kirim Data!</button>
-    </form>
+                </div>
+            </div>
+            <div class="form-grup">
+                <label for="tgl">Tanggal Lahir</label>
+                <input type="date" id="tgl" name="tgl">
+            </div>
+            <div class="form-grup">
+                <label for="alamat">Alamat</label>
+                <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap..."></textarea>
+            </div>
 
-        
+            <div class="form-grup">
+                <label for="foto">Upload Foto Profil</label>
+                <input type="file" id="foto" accept="image/*" />
+                <div id="preview">
+                    <img id="preview-img" src="" alt="Preview Foto" />
+                </div>
+            </div>
+
+
+            <button type="submit">Kirim Data!</button>
+        </form>
+
+
     </div>
 </body>
+
 </html>
