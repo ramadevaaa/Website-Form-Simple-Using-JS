@@ -5,7 +5,7 @@ body{
   /* background:linear-gradient(whitesmoke, skyblue) ; */
   background: radial-gradient(circle at top left, #a1c4fd, #c2e9fb, #fbc2eb);
   display: flex;
-  height: 120vh;
+  height: 150vh;
   align-items: center;
   justify-content: center;
   font-family:"arial";
@@ -239,4 +239,66 @@ button:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
+}
+
+#preview {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#preview img {
+  display: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#preview img:hover {
+  transform: scale(1.05);
+}
+/* ====== PESAN ERROR ====== */
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.error-border {
+  border: 1.5px solid red !important;
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.3) !important;
+}
+
+/* ====== DAFTAR MAHASISWA POPUP ====== */
+.card-mhs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.foto-mhs {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info-mhs p {
+  margin: 2px 0;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
 }
